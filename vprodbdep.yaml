@@ -38,5 +38,4 @@ spec:
           awsElasticBlockStore:
             volumeID: vol-08ab1e9871e645978
             fsType: ext4
-
 restartPolicy: always
