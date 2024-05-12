@@ -39,3 +39,10 @@ spec:
             volumeID: vol-08ab1e9871e645978
             fsType: ext4
       restartPolicy: Always
+      initContainers:
+        - name: busybox
+          image: busybox:latest
+          args: ["rm", "-rf", "/var/lib/mysql/lost+found"]
+          volumeMounts:
+            - name: vpro-db-data
+              mountPath: /var/lib/mysql
